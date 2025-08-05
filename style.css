@@ -5,6 +5,8 @@ body{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
+    justify-content: center;
+    display: flex;
 }
 
 .container{
@@ -21,8 +23,13 @@ h1{
 p{
     color: #1e0e29;
     font-size: 1.5em;
-    margin-top: -10px;
-    animation: pop 1s ease-in-out;
+    font-family: monospace;
+    border-right: 4px solid;
+    width: 37ch;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: -1.6em;
+    animation: pop 1s ease-in-out, typing 3s steps(37), blink 0.5s infinite step-end alternate;
 }
 
 .bolo{
@@ -81,4 +88,12 @@ p{
     0%{ transform: rotate(0deg) skewY(0deg); }
     50%{ transform: rotate(180deg) skewY(10deg); }
     100%{ transform: rotate(360deg) skewY(0deg); }
+}
+
+@keyframes typing {
+    from { width: 0; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
