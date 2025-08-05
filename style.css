@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #fff0f5;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.container{
+    margin-top: 10%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1{
+    color: #6a1b9a;
+    font-size: 4.5em;
+    animation: pop 1s ease-in-out;
+}
+
+p{
+    color: #1e0e29;
+    font-size: 1.5em;
+    margin-top: -10px;
+    animation: pop 1s ease-in-out;
+}
+
+.bolo{
+    width: 180px;
+    height: 280px;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.confete{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    background: #f50057;
+    animation: cair 4s linear infinite;
+}
+
+.streamer{
+    position: absolute;
+    width: 6px;
+    height: 40px;
+    background: #00bcd4;
+    border-radius: 3px;
+    transform-origin: center;
+    animation: cair 4s linear infinite, girar 2s ease-in-out infinite; 
+}
+
+@keyframes fadeIn{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+
+@keyframes flutuar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes pop{
+    0%{ transform: scale(0.5); }
+    100%{ transform: scale(1); }
+}
+
+@keyframes cair{
+    0%{
+        top: -10px; 
+        opacity: 1;
+    }
+    100%{ 
+        top: 100vh;
+        opacity: 0.2; 
+    }
+}
+
+@keyframes girar{
+    0%{ transform: rotate(0deg) skewY(0deg); }
+    50%{ transform: rotate(180deg) skewY(10deg); }
+    100%{ transform: rotate(360deg) skewY(0deg); }
+}
